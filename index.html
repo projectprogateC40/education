@@ -52,49 +52,76 @@
           <div class="pelajaran">
             <div class="lesson-icon">
               <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
-            </div>
-            <p class="text-contents">Bahasa yang digunakan untuk membuat dan mendesain tampilan situs web Anda. HTML menambahkan struktur, dan CSS menatanya.</p>
-          </div>
-          <div class="pelajaran">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>jQuery</p>
-            </div>
-            <p class="text-contents">Pustaka JavaScript yang cepat, kaya fitur, dan mudah digunakan yang menangani animasi dan permintaan Ajax.</p>
-          </div>
-          <div class="pelajaran">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Ruby</p>
-            </div>
-            <p class="text-contents">Bahasa dinamis, tujuan umum yang sederhana dan produktif. Biasanya digunakan di seluruh dunia untuk membangun aplikasi web.</p>
-          </div>
-          <div class="pelajaran">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PHP</p>
-            </div>
-            <p class="text-contents">Bahasa skrip open source yang dapat disematkan ke HTML, dan sangat cocok untuk pengembangan web.</p>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="wadah">
-        <div class="heading">
-          <h2>Siap menjadi programmer yang hebat?</h2>
-          <h3>Ayo belajar coding, belajar kreatif!</h3>
-        </div>
-        <span class="btn message">Mulai Belajar</span>
-      </div>
-    </div>
-    <footer>
-      <div class="wadah">
-        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-        <p>Belajar coding, belajar kreatif.</p>
-      </div>
-    </footer>
-  </tubuh>
+Study 4
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <ul class="flex-list">
+      <li class="li1">item1</li>
+      <li class="li2">item2</li>
+      <li class="li3">item3</li>
+      <li class="li4">item4</li>
+    </ul>
+  </body>
 </html>
+ 
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 60px 0px;
+  text-align: center;
+}
+li {
+  color: white;
+  height: 80px;
+  line-height: 80px;
+}
+.li1 {
+  background-color: #ffc562;
+}
+.li2 {
+  background-color: #a0c3f7;
+}
+.li3 {
+  background-color: #ff8db3;
+}
+.li4 {
+  background-color: #88e7ce;
+}
+
+.flex-list {
+  display: flex;
+}
+.flex-list li {
+  flex: auto;
+}
+
+/* Layout untuk Tablet */
+@media (max-width: 1000px) {
+  .flex-list {
+    flex-wrap: wrap;
+  }
+  .flex-list li {
+    width: 50%;
+  }
+}
+
+/* Layout untuk Smartphone */
+/* Tetapkan lebar breakpoint ke 670px dan di bawahnya ke media query */
+@media (max-width: 670px) {
+  /* Tetapkan flex-direction milik .flex-list */
+  .flex-list {
+    flex-direction: column;
+  }
+  
+  /* Tetapkan margin dari .flex-list li ke 0 auto */
+  .flex-list li {
+    margin: 0 auto;
+  }
+  
+}
